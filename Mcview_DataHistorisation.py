@@ -336,7 +336,7 @@ while True:
 			if (df_f1['ProjectName'].values[x] == 'HRS-H2M') and (EwonStatusOK == 1):
 				print('\n')
 				print('----------------------------------------------------------------------')
-				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncHRSH2M.sh", shell=True)
+				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncHRSH2M.sh", shell=True)
 				print('----------------------------------------------------------------------')
 				print('\n')
 				print("[ McView MSG ] - HRS-H2M Data: SharePoint Folder Updated")
@@ -346,7 +346,7 @@ while True:
 			if (df_f1['ProjectName'].values[x] == 'HRS-CNR') and (EwonStatusOK == 1):
 				print('\n')
 				print('----------------------------------------------------------------------')
-				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncHRSCNR.sh", shell=True)
+				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncHRSCNR.sh", shell=True)
 				print('----------------------------------------------------------------------')
 				print('\n')
 				print("[ McView MSG ] - HRS-CNR Data: Project SharePoint Folder Updated")
@@ -356,7 +356,7 @@ while True:
 			if (df_f1['ProjectName'].values[x] == 'HRS-IP1') and (EwonStatusOK == 1):
 				print('\n')
 				print('----------------------------------------------------------------------')
-				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncHRSIP1.sh", shell=True)
+				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncHRSIP1.sh", shell=True)
 				print('----------------------------------------------------------------------')
 				print('\n')
 				print("[ McView MSG ] - HRS-IP1 Data: SharePoint Folder Updated")
@@ -366,7 +366,7 @@ while True:
 			if (df_f1['ProjectName'].values[x] == 'HRS-APEX') and (EwonStatusOK == 1):
 				print('\n')
 				print('----------------------------------------------------------------------')
-				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncHRSAPEX.sh", shell=True)
+				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncHRSAPEX.sh", shell=True)
 				print('----------------------------------------------------------------------')
 				print('\n')
 				print("[ McView MSG ] - HRS-APEX Data: SharePoint Folder Updated")
@@ -376,7 +376,7 @@ while True:
 			if (df_f1['ProjectName'].values[x] == 'HRS1-SMTAG') and (EwonStatusOK == 1):
 				print('\n')
 				print('----------------------------------------------------------------------')
-				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncHRS1SMTAG.sh", shell=True)
+				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncHRS1SMTAG.sh", shell=True)
 				print('----------------------------------------------------------------------')
 				print('\n')
 				print("[ McView MSG ] - HRS1-SMTAG Data: SharePoint Folder Updated")
@@ -386,7 +386,7 @@ while True:
 			if (df_f1['ProjectName'].values[x] == 'HRS2-SMTAG') and (EwonStatusOK == 1):
 				print('\n')
 				print('----------------------------------------------------------------------')
-				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncHRS2SMTAG.sh", shell=True)
+				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncHRS2SMTAG.sh", shell=True)
 				print('----------------------------------------------------------------------')
 				print('\n')
 				print("[ McView MSG ] - HRS2-SMTAG Data: SharePoint Folder Updated")
@@ -396,7 +396,7 @@ while True:
 			if (df_f1['ProjectName'].values[x] == 'HRS-FAHYENCE') and (EwonStatusOK == 1):
 				print('\n')
 				print('----------------------------------------------------------------------')
-				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncHRSFAHYENCE.sh", shell=True)
+				subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncHRSFAHYENCE.sh", shell=True)
 				print('----------------------------------------------------------------------')
 				print('\n')
 				print("[ McView MSG ] - HRS-FAHYENCE Data: SharePoint Folder Updated")
@@ -414,13 +414,13 @@ while True:
 		print("[ McView MSG ] - Historique Distributions: Preparing Update...")
 		print('\n')
 		print('----------------------------------------------------------------------')
-		subprocess.run("python3 /home/pi/Desktop/DataHistorisationAPP/HistoriqueDistributions.py", shell=True )
+		subprocess.run("python3 /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/HistoriqueDistributions.py", shell=True )
 		print('----------------------------------------------------------------------')
 		print('\n')
 		sleep(1)
 		# Update SharePoint Folder
 		print('----------------------------------------------------------------------')
-		subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncReportHistoriqueDistributions.sh", shell=True)
+		subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncReportHistoriqueDistributions.sh", shell=True)
 		print('----------------------------------------------------------------------')
 		print('\n')
 		print("[ McView MSG ] - Historique Distributions: SharePoint Folder Updated")
@@ -437,7 +437,7 @@ while True:
 		print('\n')
 		# Update SharePoint Folder
 		print('----------------------------------------------------------------------')
-		subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/syncIoTGatewayStatus.sh", shell=True)
+		subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncIoTGatewayStatus.sh", shell=True)
 		print('----------------------------------------------------------------------')
 		sleep(1)
 		print('\n')
