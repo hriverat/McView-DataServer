@@ -430,22 +430,22 @@ while True:
 		print("[ ERROR 03 ] - Historique Distributions: Sharepoint Syncro Failure")
 
 	
-	# Run Shel File to update eWons Offline Table to Sharepoint. -------------------------------------------------
+	# Run .sh File to Back-Up Server Folders into Sharepoint. -------------------------------------------------
 	try:
 		print('\n')
-		print("[ McView MSG ] - Update Sharepoint Folder /IoT Gateway Status: Preparing Update...")
+		print("[ McView MSG ] - Initializing Server Back-Up into Sharepoint Folder ...")
 		print('\n')
 		# Update SharePoint Folder
 		print('----------------------------------------------------------------------')
-		subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncIoTGatewayStatus.sh", shell=True)
+		subprocess.run("sh /home/pi/Desktop/DataHistorisationAPP/McView-DataServer/syncBackupDataServer.sh", shell=True)
 		print('----------------------------------------------------------------------')
 		sleep(1)
 		print('\n')
-		print("[ McView MSG ] - /IoT Gateway Status: SharePoint Folder Updated")
+		print("[ McView MSG ] - Server Back-Up Done: SharePoint Folder Updated")
 
 	except:
 		print('\n')
-		print("[ ERROR 04 ] - /IoT Gateway Status: Sharepoint Syncro Failure")
+		print("[ ERROR 04 ] - Server Back-Up Aborted: Sharepoint Syncro Failure")
 
 	
 	# ---------------------    Wave Exit  ---------------------------------------------------------------------------
